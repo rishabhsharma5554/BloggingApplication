@@ -1,0 +1,9 @@
+package com.rishabhtech.blog.services;
+
+public interface CategoryRepo {
+	//create
+	//update
+	//delete
+	//get
+	//get all
+}

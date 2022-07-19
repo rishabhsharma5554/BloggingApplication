@@ -1,0 +1,16 @@
+package com.rishabhtech.blog.Entities;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "post")
+public class Post {
+	private Integer postId;
+	private String title;
+	private String content;
+	private String imageName;
+	private Date addedDate;
+}

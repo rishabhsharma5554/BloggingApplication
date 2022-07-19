@@ -1,0 +1,81 @@
+package com.rishabhtech.blog.services.Impl;
+
+import java.util.List;
+import com.rishabhtech.blog.exceptions.ResourceNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
+
+import com.rishabhtech.blog.Entities.User;
+import com.rishabhtech.blog.payloads.UserDTO;
+import com.rishabhtech.blog.repositories.UserRepo;
+import com.rishabhtech.blog.services.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepo userRepo;
+
+	@Override
+	public UserDTO createUser(UserDTO userDto) {
+		User user = this.dtoToUserEntity(userDto);
+		User savedUser = this.userRepo.save(user);
+		return this.userEntityToDTO(savedUser);
+	}
+
+	@Override
+	public UserDTO updateUser(UserDTO userDTO, Integer userId) {
+		/// if user not found in DB
+		User user = this.userRepo.findById(userId)
+				.orElseThrow(() -> new ResourceNotFoundException("user", "id", userId));
+		user.setName(userDTO.getName());
+		user.setEmail(userDTO.getEmail());
+		user.setPassword(userDTO.getPassword());
+		user.setAbout(userDTO.getAbout());
+
+		User updatedUser = this.userRepo.save(user);
+		UserDTO userDTO1 = this.userEntityToDTO(updatedUser);
+
+		return userDTO1;
+	}
+
+	@Override
+	public UserDTO getUserById(Integer userId) {
+		User user = this.userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("user","id",userId));
+		UserDTO userDTO = this.userEntityToDTO(user);
+		
+		
+		return userDTO;
+	}
+
+	@Override
+	public List<UserDTO> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(Integer userId) {
+		// TODO Auto-generated method stub
+
+	}
+
+	// Entity to DTO
+	private User dtoToUserEntity(UserDTO userDto) {
+		User user = new User();
+		user.setId(userDto.getId());
+		user.setName(userDto.getName());
+		user.setAbout(userDto.getAbout());
+		user.setPassword(userDto.getPassword());
+
+		return user;
+	}
+
+	public UserDTO userEntityToDTO(User user) {
+		UserDTO userDto = new UserDTO();
+		userDto.setId(user.getId());
+		userDto.setName(user.getName());
+		userDto.setPassword(user.getPassword());
+		userDto.setEmail(user.getEmail());
+		return userDto;
+	}
+}

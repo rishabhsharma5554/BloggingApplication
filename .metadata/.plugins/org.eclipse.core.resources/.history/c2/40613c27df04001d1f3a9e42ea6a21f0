@@ -1,0 +1,102 @@
+package com.rishabhtech.blog.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.rishabhtech.blog.config.AppConstants;
+import com.rishabhtech.blog.payloads.APIResponse;
+import com.rishabhtech.blog.payloads.PostDTO;
+import com.rishabhtech.blog.payloads.PostResponse;
+import com.rishabhtech.blog.services.FileService;
+import com.rishabhtech.blog.services.PostService;
+
+@RestController
+@RequestMapping("/api/")
+public class PostController {
+
+	@Autowired
+	private PostService postService;
+
+	@Autowired
+	private FileService fileService;
+	
+	@Value("${project.image}")
+	private String path;
+	
+	@PostMapping("/user/{userId}/category/{categoryId}/posts")
+	public ResponseEntity<PostDTO> createPost(@RequestBody PostDTO postDTO, @PathVariable Integer userId,
+			@PathVariable Integer categoryId) {
+		PostDTO createPost = this.postService.createPost(postDTO, userId, categoryId);
+		return new ResponseEntity<PostDTO>(createPost, HttpStatus.CREATED);
+	}
+
+	@GetMapping("/user/{userId}/posts")
+	public ResponseEntity<List<PostDTO>> getPostByUser(@PathVariable Integer userId) {
+		List<PostDTO> postsbyUser = this.postService.getPostsByUser(userId);
+		return new ResponseEntity<List<PostDTO>>(postsbyUser, HttpStatus.OK);
+	}
+
+	@GetMapping("/category/{categoryId}/posts")
+	public ResponseEntity<List<PostDTO>> getPostByCategory(@PathVariable Integer categoryId) {
+		List<PostDTO> postsbyCategory = this.postService.getPostsByCategory(categoryId);
+		return new ResponseEntity<List<PostDTO>>(postsbyCategory, HttpStatus.OK);
+	}
+
+	@GetMapping("/posts")
+	public ResponseEntity<PostResponse> getAllPosts(
+			@RequestParam(value = "pageNo", defaultValue = AppConstants.PAGE_NO, required = false) Integer pageNo,
+			@RequestParam(value = "pageSize", defaultValue = AppConstants.PAGE_SIZE, required = false) Integer pageSize,
+			@RequestParam(value = "sortBy", defaultValue = AppConstants.SORT_BY, required = false) String sortBy,
+			@RequestParam(value = "sortDir", defaultValue = AppConstants.SORT_DIR, required = false) String sortDir) {
+		PostResponse postResponse = this.postService.getAllPosts(pageNo, pageSize, sortBy,sortDir);
+		return new ResponseEntity<PostResponse>(postResponse, HttpStatus.OK);
+	}
+
+	@GetMapping("/posts/{postId}")
+	public ResponseEntity<PostDTO> getAllPosts(@PathVariable Integer postId) {
+		PostDTO postDTO = this.postService.getPostById(postId);
+		return new ResponseEntity<PostDTO>(postDTO, HttpStatus.OK);
+	}
+
+	@DeleteMapping("/posts/{postId}")
+	public APIResponse deletePost(@PathVariable Integer postId) {
+		this.postService.deletePost(postId);
+		return new APIResponse("Post succesfully Deleted.", true);
+	}
+
+	@PutMapping("/posts/{postId}")
+	public ResponseEntity<PostDTO> updatePost(@RequestBody PostDTO postDTO, @PathVariable Integer postId) {
+		PostDTO updatedPost = this.postService.updatePost(postDTO, postId);
+		return new ResponseEntity<PostDTO>(updatedPost, HttpStatus.OK);
+
+	}
+	
+	@GetMapping("/posts/search/{keywords}")
+	public ResponseEntity<List<PostDTO>> searchPostByTitle(@PathVariable("keywords") String keywords) {
+		List<PostDTO> result = this.postService.searchPosts(keywords);
+		return new ResponseEntity<List<PostDTO>>(result, HttpStatus.OK);
+
+	}
+	
+	//post image upload
+	@PostMapping("/posts/image/upload/{postId}")
+	public ResponseEntity<ImageResponse> uploadImage(
+			@RequestParam("image") MultipartFile image)
+	{
+		this.fileService.uploadImage(path, image);
+	}
+}

@@ -1,0 +1,23 @@
+package com.rishabhtech.blog.payloads;
+
+import java.util.Date;
+import java.util.HashSet;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import com.rishabhtech.blog.Entities.Comment;
+@Getter
+@Setter
+@NoArgsConstructor
+public class PostDTO {
+	private Integer postId;
+	private String title;
+	private String content;
+	private String imageName;
+	private Date addedDate;
+	private UserDTO user;
+	private CategoryDTO category;
+	
+	private Set<Comment> comments = new HashSet<>();
+}

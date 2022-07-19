@@ -1,0 +1,43 @@
+
+“
+java:S1488t"`Immediately return this expression instead of assigning it to the temporary variable "postDtos".(”ï¹8ì±úíŸ0HÓRMINORZ
+CODE_SMELL
+”
+java:S1488Š"`Immediately return this expression instead of assigning it to the temporary variable "postDTOs".(«é»ñ8¾Ø®¯ 0HğRMINORZ
+CODE_SMELL
+…
+java:S6204u"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8«®Ï® 0HßRMAJORZ
+CODE_SMELL
+‚
+java:S1192;"GDefine a constant instead of duplicating this literal "PostId" 3 times.(É‡áüÿÿÿÿ8«®Ï® 0HÚRCRITICALZ
+CODE_SMELL
+f
+java:S1611"2Remove the parentheses around the "post" parameter(”ï¹8ÏâÊéŸ0HØRMINORZ
+CODE_SMELL
+…
+java:S6204["RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ÛªåéŸ0HÙRMAJORZ
+CODE_SMELL
+f
+java:S1611Š"2Remove the parentheses around the "post" parameter(«é»ñ8¾Ø®¯ 0HóRMINORZ
+CODE_SMELL
+s	java:S125O"<This block of commented-out lines of code should be removed.(æ¼óÿÿÿÿÿ8Îû® 0H¾RMAJORZ
+CODE_SMELL
+e
+java:S1611t"2Remove the parentheses around the "post" parameter(”ï¹8‹ºáéŸ0H×RMINORZ
+CODE_SMELL
+n	java:S125L"<This block of commented-out lines of code should be removed.(ø¬âŞ8şñÑ® 0HëRMAJORZ
+CODE_SMELL
+”
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "postDtos".(”ï¹8³œôíŸ0HÍRMINORZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´ø­ÉHËRMINORZ
+CODE_SMELL
+d
+java:S1611Z"2Remove the parentheses around the "post" parameter(Œšê_8«®Ï® 0HŞRMINORZ
+CODE_SMELL
+†
+java:S6204‚"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8Ï«ûíŸ0HÌRMAJORZ
+CODE_SMELL
+†
+java:S6204Š"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(«é»ñ8ëå³¯ 0H‘RMAJORZ
+CODE_SMELL

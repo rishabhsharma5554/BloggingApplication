@@ -1,0 +1,37 @@
+package com.rishabhtech.blog.services.Impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.rishabhtech.blog.Entities.Post;
+import com.rishabhtech.blog.exceptions.ResourceNotFoundException;
+import com.rishabhtech.blog.payloads.CommentDTO;
+import com.rishabhtech.blog.repositories.CommentRepo;
+import com.rishabhtech.blog.repositories.PostRepo;
+import com.rishabhtech.blog.services.CommentService;
+
+@Service
+public class CommentServiceImpl implements CommentService{
+
+	@Autowired
+	
+	private PostRepo postRepo;
+	
+	@Autowired
+	private CommentRepo commentRepo;
+	
+	@Override
+	public CommentDTO createComment(CommentDTO commentDTO, Integer postId) {
+		
+		Post post = this.postRepo.findById(postId).orElseThrow(()-> new ResourceNotFoundException("Post", "PostId", postId));
+		
+	return null;
+	}
+
+	@Override
+	public void deleteComment(Integer commentId) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

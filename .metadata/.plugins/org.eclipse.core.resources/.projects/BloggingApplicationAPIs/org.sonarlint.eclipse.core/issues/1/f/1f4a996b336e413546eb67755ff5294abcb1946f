@@ -1,0 +1,29 @@
+
+n	java:S125R"<This block of commented-out lines of code should be removed.(ÖÇ¨Ñ8„Ñ±Ÿ0HÏRMAJORZ
+CODE_SMELL
+‘
+java:S1488E"`Immediately return this expression instead of assigning it to the temporary variable "userDTOs".(£ë“øÿÿÿÿH×RMINORZ
+CODE_SMELL
+s
+java:S1612E"BReplace this lambda with method reference 'this::userEntityToDTO'.(£ë“øÿÿÿÿHäRMINORZ
+CODE_SMELL
+‘
+java:S14885"`Immediately return this expression instead of assigning it to the temporary variable "userDTO1".(‘¿ŠãûÿÿÿÿHİRMINORZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´ø­ÉHÖRMINORZ
+CODE_SMELL
+ƒ
+java:S6204E"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(£ë“øÿÿÿÿHàRMAJORZ
+CODE_SMELL
+”
+java:S1488Y"\Immediately return this expression instead of assigning it to the temporary variable "user".(´ß‰ßüÿÿÿÿ8„Ñ±Ÿ0HáRMINORZ
+CODE_SMELL
+s	java:S125a"<This block of commented-out lines of code should be removed.(¢É«ƒùÿÿÿÿ8£ÃÔ±Ÿ0HèRMAJORZ
+CODE_SMELL
+’
+java:S1488i"_Immediately return this expression instead of assigning it to the temporary variable "userDTO".(‹İù©8£ÃÔ±Ÿ0HÚRMINORZ
+CODE_SMELL
+g	java:S125="<This block of commented-out lines of code should be removed.(áÇÎ³HæRMAJORZ
+CODE_SMELL
+{
+java:S3655u"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(€±ÔQ8¨â†…¡0H†)RMAJORZBUG

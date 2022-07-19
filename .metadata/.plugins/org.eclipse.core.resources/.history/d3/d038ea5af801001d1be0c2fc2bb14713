@@ -1,0 +1,8 @@
+package com.rishabhtech.blog.services;
+
+import com.rishabhtech.blog.Entities.User;
+import com.rishabhtech.blog.payloads.UserDTO;
+
+public interface UserService {
+	UserDTO createUser(UserDTO user);
+}

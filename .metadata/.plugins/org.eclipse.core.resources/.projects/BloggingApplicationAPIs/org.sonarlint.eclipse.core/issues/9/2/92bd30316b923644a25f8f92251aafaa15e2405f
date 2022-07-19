@@ -1,0 +1,24 @@
+
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘Ûí˜ıÿÿÿÿH¾!RMINORZ
+CODE_SMELL
+„
+java:S6204:"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ğ­µN8àŒ½Ü 0Hú!RMAJORZ
+CODE_SMELL
+]
+java:S19480"'Make "posts" transient or serializable.(¦ì§È8àŒ½Ü 0H÷!RCRITICALZ
+CODE_SMELL
+d
+java:S1611:"2Remove the parentheses around the "role" parameter(ğ­µN8àŒ½Ü 0Hû!RMINORZ
+CODE_SMELL
+i
+java:S1135A"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ8àŒ½Ü 0Hÿ!RINFOZ
+CODE_SMELL
+i
+java:S1135G"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ8àŒ½Ü 0H€"RINFOZ
+CODE_SMELL
+]
+java:S19484"'Make "roles" transient or serializable.(ÁÀö»8àŒ½Ü 0Hø!RCRITICALZ
+CODE_SMELL
+–
+java:S14889"cImmediately return this expression instead of assigning it to the temporary variable "authorities".(Ò‚ç8ÒºÁÜ 0H"RMINORZ
+CODE_SMELL

@@ -1,0 +1,13 @@
+package com.rishabhtech.blog.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "categories")
+public class Category {
+	
+	private Integer categoryId;
+	private String categoryTitle;
+	private String categoryDescription;
+}

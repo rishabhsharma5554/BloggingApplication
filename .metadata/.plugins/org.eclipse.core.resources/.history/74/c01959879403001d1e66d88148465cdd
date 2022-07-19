@@ -1,0 +1,21 @@
+package com.rishabhtech.blog.payloads;
+
+import java.util.Date;
+
+import com.rishabhtech.blog.Entities.Category;
+import com.rishabhtech.blog.Entities.User;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+@Getter
+@Setter
+@NoArgsConstructor
+public class PostDTO {
+	private String title;
+	private String content;
+	private String imageName;
+	private Date addedDate;
+	private UserDTO user;
+	private CategoryDTO category;
+}

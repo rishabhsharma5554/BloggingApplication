@@ -1,0 +1,49 @@
+package com.rishabhtech.blog.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rishabhtech.blog.payloads.JWTAuthRequest;
+import com.rishabhtech.blog.payloads.JWTAuthResponse;
+import com.rishabhtech.blog.security.JWTTokenHelper;
+
+@RestController
+@RequestMapping("/api/v1/auth/")
+public class AuthController {
+	
+	@Autowired
+	private JWTTokenHelper jwtTokenHelper;
+	
+	@Autowired
+	private UserDetailsService userDetailsService;
+	
+	@Autowired
+	private AuthenticationManager authenticationManager;
+	
+	
+	@PostMapping("/login")
+	public ResponseEntity<JWTAuthResponse> createToken(@RequestBody JWTAuthRequest request)
+	{
+		AuthController authController = this;
+		authController.authenticate(request.getUsername(),request.getPassword());
+		return null;
+		
+	}
+
+
+	private void authenticate(String username, String password) {
+		UsernamePasswordAuthenticationToken authenticateToken = new UsernamePasswordAuthenticationToken(username,password);
+		
+		
+			this.authenticationManager.authenticate(authenticateToken);
+	
+	}
+}

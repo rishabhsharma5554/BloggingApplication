@@ -1,0 +1,40 @@
+package com.rishabhtech.blog.services.Impl;
+
+import java.util.List;
+
+import com.rishabhtech.blog.payloads.CategoryDTO;
+import com.rishabhtech.blog.services.CategoryService;
+
+public class CategoryServiceImpl implements CategoryService {
+
+	@Override
+	public CategoryDTO createCategory(CategoryDTO categoryDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryDTO updateCategory(CategoryDTO categoryDTO, Integer categoryId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteCategory(Integer categoryId) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public CategoryDTO getCategory(Integer categoryId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<CategoryDTO> getCategories() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

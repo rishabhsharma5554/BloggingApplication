@@ -1,0 +1,5 @@
+package com.rishabhtech.blog.security;
+
+public class CustomUserDTOService {
+
+}

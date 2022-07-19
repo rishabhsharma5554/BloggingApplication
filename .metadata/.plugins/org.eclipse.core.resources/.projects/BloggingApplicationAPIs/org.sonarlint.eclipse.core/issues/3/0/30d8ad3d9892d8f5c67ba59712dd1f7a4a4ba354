@@ -1,0 +1,16 @@
+
+„
+java:S1192""IDefine a constant instead of duplicating this literal "Category" 3 times.(àÜ€ºüÿÿÿÿ8Ğ®ŒáŸ0HRCRITICALZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´ø­ÉHä
+RMINORZ
+CODE_SMELL
+Š
+java:S6204;"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ıˆŸ÷ûÿÿÿÿ8Åõ˜áŸ0H¨RMAJORZ
+CODE_SMELL
+i
+java:S1611;"1Remove the parentheses around the "cat" parameter(ıˆŸ÷ûÿÿÿÿ8ÏŸÍãŸ0H‹RMINORZ
+CODE_SMELL
+œ
+java:S1488;"dImmediately return this expression instead of assigning it to the temporary variable "categoryDTOs".(ıˆŸ÷ûÿÿÿÿ8˜İšáŸ0H­RMINORZ
+CODE_SMELL

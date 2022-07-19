@@ -1,0 +1,25 @@
+package com.rishabhtech.blog.payloads;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import lombok.*;
+@Getter
+@Setter
+@NoArgsConstructor
+public class UserDTO {
+	
+	private Integer id;
+	@NotEmpty
+	@Size(min=4,message = "User name must me min of 4 Characters")
+	private String name;
+	@Email(message="Givem email address is invalid")
+	private String email;
+	@NotEmpty(min=4,message = "Password must me min of 4 Characters")
+	private String password;
+	@NotNull
+	private String about;
+	
+}

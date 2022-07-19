@@ -1,0 +1,7 @@
+server.port=8080
+
+#DB configuration
+spring.datasource.utl=jdbc:mysql://localhost:3306/blog_app_apis?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=admin
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect

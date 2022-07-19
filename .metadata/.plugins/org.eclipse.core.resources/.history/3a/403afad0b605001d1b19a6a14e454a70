@@ -1,0 +1,5 @@
+package com.rishabhtech.blog.utils;
+
+public class PasswordGenerator {
+
+}

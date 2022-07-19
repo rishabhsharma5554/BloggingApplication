@@ -1,0 +1,23 @@
+package com.rishabhtech.blog.payloads;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+
+import lombok.*;
+@Getter
+@Setter
+@NoArgsConstructor
+public class UserDTO {
+	
+	private Integer id;
+	@NotNull
+	private String name;
+	@Email
+	@NotNull
+	private String email;
+	@NotNull
+	private String password;
+	@NotNull
+	private String about;
+	
+}

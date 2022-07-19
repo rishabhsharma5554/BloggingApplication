@@ -1,0 +1,5 @@
+package com.rishabhtech.blog.Entities;
+
+public class User {
+
+}

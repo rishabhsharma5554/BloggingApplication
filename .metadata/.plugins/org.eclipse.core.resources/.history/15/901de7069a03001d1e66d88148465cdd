@@ -1,0 +1,17 @@
+package com.rishabhtech.blog.services;
+
+import java.util.List;
+
+import com.rishabhtech.blog.Entities.Post;
+import com.rishabhtech.blog.payloads.PostDTO;
+
+public interface PostService {
+	PostDTO createPost(PostDTO postDTO,Integer userId,Integer categoryId);
+	Post updatePost(PostDTO postDTO,Integer id);
+	void deletePost(Integer id);
+	List<Post> getAllPosts();
+	Post getPostById(Integer postId);
+	List<PostDTO> getPostByCategory(Integer categoryId);
+	List<PostDTO> getPostsByUser(Integer userId);
+	List<Post> searchPosts(String keyword);
+}

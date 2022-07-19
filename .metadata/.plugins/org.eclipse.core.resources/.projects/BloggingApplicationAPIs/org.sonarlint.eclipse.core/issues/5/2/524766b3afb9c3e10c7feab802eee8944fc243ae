@@ -1,0 +1,18 @@
+
+k	java:S1061"9Replace this use of System.out or System.err by a logger.(›ÖŸˆ8°ÇÀÿ 0HÂ#RMAJORZ
+CODE_SMELL
+k	java:S1065"9Replace this use of System.out or System.err by a logger.(¶ÌË8õ©Şÿ 0HÉ#RMAJORZ
+CODE_SMELL
+p	java:S1069"9Replace this use of System.out or System.err by a logger.(Ä»«úÿÿÿÿ8õ©Şÿ 0HÊ#RMAJORZ
+CODE_SMELL
+b
+java:S5411A"*Use the primitive boolean expression here.(÷óò‹øÿÿÿÿ8°ÇÀÿ 0H¼#RMINORZ
+CODE_SMELL
+p	java:S1063"9Replace this use of System.out or System.err by a logger.(çº²¨ÿÿÿÿÿ8°ÇÀÿ 0HÇ#RMAJORZ
+CODE_SMELL
+p	java:S106N"9Replace this use of System.out or System.err by a logger.(·…×şÿÿÿÿ8°ÇÀÿ 0HÆ#RMAJORZ
+CODE_SMELL
+p	java:S106'"9Replace this use of System.out or System.err by a logger.(éüôŠøÿÿÿÿ8°ÇÀÿ 0HÈ#RMAJORZ
+CODE_SMELL
+k	java:S106R"9Replace this use of System.out or System.err by a logger.(³ï8°ÇÀÿ 0HÅ#RMAJORZ
+CODE_SMELL

@@ -1,0 +1,10 @@
+package com.rishabhtech.blog.security;
+
+import lombok.Data;
+import lombok.Setter;
+
+@Data
+public class JWTAuthResponse {
+	private String token;
+	
+}

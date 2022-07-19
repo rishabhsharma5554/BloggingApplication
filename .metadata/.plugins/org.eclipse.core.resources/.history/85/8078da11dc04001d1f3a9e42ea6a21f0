@@ -1,0 +1,5 @@
+package com.rishabhtech.blog.config;
+
+public class AppConstants {
+
+}

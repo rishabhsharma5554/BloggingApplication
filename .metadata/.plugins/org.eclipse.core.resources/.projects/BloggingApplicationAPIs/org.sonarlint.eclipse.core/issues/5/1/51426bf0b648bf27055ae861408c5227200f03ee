@@ -1,0 +1,15 @@
+
+Œ
+java:S2293""YReplace the type specification in this constructor call with the diamond operator ("<>").(‘ÕÅ¾8•›Í²Ÿ0Hò!RMINORZ
+CODE_SMELL
+Œ
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆş¨‚8°Ş¶„¡0H€&RMINORZ
+CODE_SMELL
+Œ
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(İö™¿8û›±Ÿ0Hï!RMINORZ
+CODE_SMELL
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚĞÉO8àêÆ²Ÿ0Hî!RMINORZ
+CODE_SMELL
+k
+java:S1611"3Remove the parentheses around the "error" parameter(‘šíâıÿÿÿÿ8„Î×²Ÿ0Hñ!RMINORZ
+CODE_SMELL
